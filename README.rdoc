@@ -1,0 +1,17 @@
+== Books Demo
+
+> This is the simple Rails application which demonstrates many to many association and API creation
+
+* Ruby version : 2.3.0 
+
+* Application setup : bundle install 
+
+* Database creation: rake db:setup 
+
+* Start server: rails s
+
+* Access application : visit "http://localhost:3000" from browser
+
+* Access API : "http://localhost:3000/api/v1/authors/1" to get author detail with books
+
+* ...

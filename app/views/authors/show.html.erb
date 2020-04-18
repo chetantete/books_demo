@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @author.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @author.last_name %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @author.date_of_birth %>
+</p>
+
+<hr>
+<h3><%= "#{@author.first_name} #{@author.last_name} books" %></h3>
+<% if @author.books.present? %>
+	<table>
+	  <thead>
+	    <tr>
+	      <th>book title</th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <% @author.books.each do |book| %>
+	      <tr>
+	        <td><%= book.book_title %></td>
+	     </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+<% else %>
+  <p> no book present at this time, please try later! </p>
+<% end %>
+
+<br>
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %>
